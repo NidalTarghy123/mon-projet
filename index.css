@@ -1,0 +1,171 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('image.jpg') no-repeat center center fixed; /* Image de fond */
+    background-size: cover;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Cooper Black', serif;
+    color: #b30a5e;
+    margin: 20px 0;
+}
+
+.photo img {
+    width: 250px; /* Agrandir l'image */
+    height: 250px;
+    border-radius: 50%;
+    border: 10px solid #f07ea3; /* Bordure rose douce */
+    margin-bottom: 20px;
+    opacity: 0.9; /* Légère transparence pour l'effet lumineux */
+}
+
+.name h2 {
+    font-size: 2rem;
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(to right, #f8b7d6, #f07ea3); /* Dégradé rose */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 10px 0;
+    max-width: 600px;
+    font-family: 'Verdana', sans-serif; /* Police claire */
+    color: #050404; /* Couleur foncée */
+}
+/* Titre "Pour le contact" */
+footer h2 {
+    font-size: 1.5rem;                /* Taille de la police */
+    font-family: 'Georgia', serif;    /* Type de police élégant et clair */
+    color: #e15093;                   /* Couleur rose fuchsia */
+    text-align: center;               /* Texte centré */
+    margin: 20px 0;                   /* Espacement au-dessus et en dessous */
+}
+/* Informations de contact */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.info-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #b30a5e;
+}
+
+.info-item span {
+    font-weight: bold;
+    color: #4a116d;
+}
+
+.info-item a {
+    text-decoration: none;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+.info-item a:hover {
+    color: #4a116d;
+    text-decoration: underline;
+}
+
+/* Bouton de navigation */
+.contact {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #f07ea3; /* Bouton rose */
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact:hover {
+    background-color: #e6007e; /* Couleur hover rose */
+    transition: 0.3s;
+}
+/* Responsive Design pour les petits écrans */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Réduction de la taille du titre */
+        margin: 10px 0;
+    }
+
+    .photo img {
+        width: 150px; /* Taille de l'image réduite */
+        height: 150px;
+        border: 5px solid #f07ea3;
+    }
+
+    .name h2 {
+        font-size: 1.5rem; /* Taille ajustée pour le nom */
+    }
+
+    .text p {
+        font-size: 1rem; /* Texte plus petit */
+        line-height: 1.5;
+        padding: 0 10px; /* Ajouter un padding pour éviter les bords */
+    }
+
+    .contact-info {
+        gap: 10px; /* Moins d'espace entre les éléments */
+    }
+
+    .info-item {
+        font-size: 1rem; /* Taille réduite pour les informations */
+    }
+
+    footer h2 {
+        font-size: 1.2rem; /* Taille ajustée pour le titre de contact */
+    }
+
+    .contact {
+        font-size: 0.9rem; /* Taille du bouton réduite */
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem; /* Encore plus petit pour les très petits écrans */
+    }
+
+    .photo img {
+        width: 120px; /* Réduction de l'image */
+        height: 120px;
+    }
+
+    .name h2 {
+        font-size: 1.2rem; /* Taille ajustée */
+    }
+
+    .text p {
+        font-size: 0.9rem; /* Réduction du texte */
+    }
+
+    .contact {
+        font-size: 0.8rem; /* Bouton plus petit */
+        padding: 6px 12px;
+    }
+}

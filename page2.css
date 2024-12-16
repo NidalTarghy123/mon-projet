@@ -1,0 +1,138 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background: url('image.jpg') no-repeat center center fixed; /* Image de fond */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color:#070004 ;
+    font-family: 'Cooper Black',serif;
+    font-size: 40px;
+}
+
+
+/* Boîtes de contenu */
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espacement marqué entre les deux boîtes */
+}
+
+/* Boîte des informations personnelles et des objectifs professionnels */
+.info-box, .objectives-box {
+    background-color: #fff;
+    border: 2px solid #ff66b2; /* Bordure rose pour les deux cases */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 48%; /* Prend une largeur de 48% pour les deux boîtes */
+    height: 400px; /* Taille rectangulaire des boîtes */
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Cooper Black', serif;
+    color: #b30a5e; /* Gris foncé pour les titres */
+}
+
+.info-box ul, .objectives-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #0e0b0b;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px; /* Espacement entre la fin du contenu et les boutons */
+}
+
+.prev-button, .next-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff66b2; /* Couleur rose */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #ff3399; /* Rose plus foncé au survol */
+}
+
+.prev-button {
+    margin-left: 0;
+}
+
+.next-button {
+    margin-right: 0;
+}
+/* Responsive Design pour les tablettes */
+@media (max-width: 768px) {
+    .content-box {
+        flex-direction: column; /* Les boîtes passent en colonne */
+        gap: 20px; /* Espacement réduit entre les boîtes */
+    }
+
+    .info-box, .objectives-box {
+        width: 100%; /* Les boîtes prennent toute la largeur */
+        height: auto; /* Hauteur ajustée automatiquement */
+        padding: 15px; /* Espacement interne réduit */
+    }
+
+    h2 {
+        font-size: 24px; /* Taille des titres réduite */
+    }
+
+    .prev-button, .next-button {
+        font-size: 16px; /* Taille réduite des boutons */
+        padding: 8px 16px;
+    }
+}
+
+/* Responsive Design pour les téléphones */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px; /* Taille du titre ajustée */
+    }
+
+    .info-box, .objectives-box {
+        padding: 10px; /* Moins d'espace interne */
+        border-radius: 5px; /* Bordures plus douces */
+    }
+
+    h2 {
+        font-size: 20px; /* Réduction des titres */
+    }
+
+    ul {
+        font-size: 14px; /* Taille de texte plus petite */
+    }
+
+    .prev-button, .next-button {
+        font-size: 14px; /* Taille réduite des boutons */
+        padding: 6px 12px;
+    }
+
+    .navigation {
+        flex-direction: column; /* Les boutons passent en colonne */
+        align-items: center; /* Alignement centré */
+        gap: 10px;
+    }
+}
